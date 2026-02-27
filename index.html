@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On-Call Lookup</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
+  <script src="/client/quick.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>On-Call Lookup</h1>
+      <p id="greeting" class="greeting"></p>
+    </header>
+
+    <div class="search-wrapper">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search for a team (e.g. Platform, AI-Proxy)..."
+        autocomplete="off"
+        disabled
+      >
+      <div id="dropdown" class="dropdown hidden"></div>
+    </div>
+
+    <div id="results" class="results"></div>
+    <div id="loading" class="loading hidden">
+      <div class="spinner"></div>
+      <span>Looking up on-call...</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
